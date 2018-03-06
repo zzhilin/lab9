@@ -30,16 +30,20 @@
      color: #6e6e6e;
 }
 
-.project a {
+.lab a {
      text-align: center;
 }
 
-.project .details {
+.lab .details {
      overflow: hidden;
 }
 
-.project .details .detailsImage {
+.lab .details .detailsImage {
      width: 200px;
      margin: 10px 10px 10px 0px;
      float: left;
+}
+
+.lab-img{
+     height: 200px !important;
 }

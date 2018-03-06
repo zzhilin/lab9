@@ -5,26 +5,21 @@ $(document).ready(function() {
 	initializePage();
 })
 
-/*
- * Function that is called when the document is ready.
- */
+// Function that is called when the document is ready.
 function initializePage() {
-	$('.project a').click(addProjectDetails);
-
-	$('#colorBtn').click(randomizeColors);
+    $.get('/lab/today', onServerResponse);
 }
 
-/*
- * Make an AJAX call to retrieve project details and add it in
- */
-function addProjectDetails(e) {
-	// Prevent following the link
-	e.preventDefault();
+// Function that is called when the server responds to the AJAX call
+function onServerResponse(data){
+    var labElementId = getLabElementId(data.id);
+    var labElement = $(labElementId);
+    labElement.css({'background': 'yellow'});
+}
 
-	// Get the div ID, e.g., "project3"
-	var projectID = $(this).closest('.project').attr('id');
-	// get rid of 'project' from the front of the id 'project3'
-	var idNumber = projectID.substr('project'.length);
 
-	console.log("User clicked on project " + idNumber);
+// Function to format the CSS selector
+function getLabElementId(id){
+    var labElementId = '#lab_' + id;
+    return labElementId;
 }
