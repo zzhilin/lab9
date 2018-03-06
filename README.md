@@ -1,4 +1,4 @@
-lab6
+lab9
 ====
 
-Lab 6: FB Login and AJAX
+Lab 9: Debugging 101
