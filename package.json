@@ -4,7 +4,7 @@
   "author": "Intro HCI Staff",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/DesignAtLarge/lab9"
   },
   "license": "MIT",
   "private": true,
@@ -18,6 +18,6 @@
     "mongoose": "*"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "8.9.x"
   }
 }
